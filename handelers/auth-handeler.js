@@ -46,28 +46,6 @@ async function loginUser(model) {
   }
 }
 
-// const loginUser = async ({ email, password }) => {
-//     // Find the user by email
-//     const user = await User.findOne({ email });
-//     if (!user) {
-//       return null; // User not found
-//     }
-
-//     // Compare the provided password with the hashed password
-//     const isMatch = await bcrypt.compare(password, user.password);
-//     if (!isMatch) {
-//       return null; // Password doesn't match
-//     }
-
-//     // Return user information (exclude sensitive fields)
-//     return {
-//       id: user._id,
-//       name: user.name,
-//       email: user.email,
-//       isAdmin: user.isAdmin,
-//     };
-//   };
-
 module.exports = {
   registerUser,
   loginUser,
